@@ -161,7 +161,7 @@ public class EditToolHandler {
     }
 
     private void disableListeners() {
-        EditBlackboardUtil.doneListening();
+        //EditBlackboardUtil.doneListening();
         
         EditBlackboardUtil.disableClearBlackboardCommand();
     }
