@@ -320,18 +320,12 @@ public class ViewportPainter {
          */
         public void clearCommands() {
             for (IDrawCommand command : preTransform) {
-                if(command != null)
-                {
-                    command.setValid(false);
-                    command.dispose();
-                }
+                command.setValid(false);
+                command.dispose();
             }
             for (IDrawCommand command : postTransform) {
-                if(command != null)
-                {
-                    command.setValid(false);
-                    command.dispose();
-                }
+                command.setValid(false);
+                command.dispose();
             }
             preTransform = new IMapTransformCommand[5];
             postTransform = new IMapTransformCommand[5];
@@ -339,18 +333,12 @@ public class ViewportPainter {
             postTI = 0;
 
             for (IDrawCommand command : preNorm) {
-                if(command != null)
-                {
-                    command.setValid(false);
-                    command.dispose();
-                }
+                command.setValid(false);
+                command.dispose();
             }
             for (IDrawCommand command : postNorm) {
-                if(command != null)
-                {
-                    command.setValid(false);
-                    command.dispose();
-                }
+                command.setValid(false);
+                command.dispose();
             }
             preNorm = new IDrawCommand[5];
             postNorm = new IDrawCommand[5];
