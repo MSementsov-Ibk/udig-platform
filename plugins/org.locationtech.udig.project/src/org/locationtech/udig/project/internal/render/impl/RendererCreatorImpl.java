@@ -243,7 +243,9 @@ public class RendererCreatorImpl implements RendererCreator {
                 }
     
                 List<InternalRenderMetrics> layerfactories = layerToMetricsFactoryMap.get(layer);
-                Collections.sort(layerfactories, new RenderMetricsSorter(layers));
+                synchronized (layerfactories) {
+                    Collections.sort(layerfactories, new RenderMetricsSorter(layers));
+                }
     
                 if (layerfactories.isEmpty()) {
                     // nobody loves this layer
