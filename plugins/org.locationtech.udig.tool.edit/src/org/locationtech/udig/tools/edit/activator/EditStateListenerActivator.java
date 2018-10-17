@@ -36,6 +36,8 @@ public class EditStateListenerActivator implements Activator {
     }
     
     public void deactivate( EditToolHandler handler ) {
+        if(handler.getCurrentState() == EditState.ILLEGAL)
+            handler.setCurrentState(EditState.NONE);
         handler.getContext().getMap().getBlackboard().removeListener(iconManager);
     	iconManager = null;
     }
